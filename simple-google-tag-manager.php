@@ -82,7 +82,7 @@ height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></nos
 
    function sgtm_section_settings_cb( $args ) {
       ?>
-         <p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Hier den Google Tag Manager Code eingeben (Format: GTM-XXXXXX)', 'sgtm' ); ?></p>
+         <p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Here you can enter the GTM Code. (Format: GTM-XXXXXX)', 'sgtm' ); ?></p>
       <?php
    }
 
@@ -116,7 +116,7 @@ height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></nos
       }
     
       if ( isset( $_GET['settings-updated'] ) ) {
-         add_settings_error( 'sgtm_messages', 'sgtm_message', __( 'Einstellungen gespeichert', 'sgtm' ), 'updated' );
+         add_settings_error( 'sgtm_messages', 'sgtm_message', __( 'Settings saved.', 'sgtm' ), 'updated' );
          $options = get_option( 'sgtm_options' );
       }
     
@@ -131,7 +131,7 @@ height=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></nos
  
       do_settings_sections( 'sgtm' );
 
-      submit_button( 'Speichern' );
+      submit_button( 'Save' );
 
       ?>
             </form>
